@@ -1,14 +1,9 @@
-pub fn add(left: u64, right: u64) -> u64 {
-    left + right
-}
+//! dirctl-core
+//!
+//! Pure domain logic for the dirctl file organization engine.
+//! This crate contains no I/O operations - it defines the core entities,
+//! ports (traits), and business rules.
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+// Re-export public API (will be populated in later tasks)
 
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
-}
+// This is a skeleton - modules will be added in phase 2

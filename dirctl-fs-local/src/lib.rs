@@ -1,14 +1,7 @@
-pub fn add(left: u64, right: u64) -> u64 {
-    left + right
-}
+//! dirctl-fs-local
+//!
+//! Local filesystem adapter implementation for dirctl.
+//! This crate implements the ports (traits) defined in dirctl-core
+//! to perform actual file operations on the local filesystem.
 
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
-}
+// This is a skeleton - adapter implementations will be added in later phases
