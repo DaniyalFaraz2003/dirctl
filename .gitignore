@@ -1,0 +1,44 @@
+# Rust / Cargo
+/target/
+**/*.rs.bk
+Cargo.lock.bak
+.rustc_info.json
+
+# Build artifacts
+*.pdb
+*.dll
+*.so
+*.dylib
+
+# IDE / Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# OS
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Debug / Profiling
+*.profraw
+*.profdata
+*.gcda
+*.gcno
+
+# Test / Coverage
+coverage/
+*.lcov
+tarpaulin-report.html
+
+# Local / Environment
+.env
+.env.local
+.env.*.local
+*.local

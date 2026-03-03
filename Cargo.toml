@@ -1,0 +1,52 @@
+[workspace]
+members = [
+    "dirctl-core",
+    "dirctl-fs-local",
+    "dirctl-cli",
+]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+authors = ["dirctl contributors"]
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/daniyalmalik/dirctl"
+keywords = ["file-management", "organization", "automation"]
+categories = ["command-line-utilities", "filesystem"]
+
+[workspace.dependencies]
+# Core dependencies (pinned for determinism)
+thiserror = "2.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+serde_yaml = "0.9"
+
+# UUID v7 for time-sortable transaction IDs
+uuid = { version = "1.10", features = ["v7", "serde"] }
+
+# Date/time handling
+chrono = { version = "0.4", features = ["serde"] }
+
+# Deterministic iteration (no HashMap iteration affecting semantics)
+indexmap = { version = "2.6", features = ["serde"] }
+
+# Pattern matching
+regex = "1.11"
+
+# Filesystem operations
+walkdir = "2.5"
+ignore = "0.4"
+
+# Async runtime
+tokio = { version = "1.40", features = ["fs", "io-util", "rt-multi-thread"] }
+
+# CLI framework
+clap = { version = "4.5", features = ["derive"] }
+
+# Logging/tracing
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+# Testing utilities (dev-only)
+tempfile = "3.10"

@@ -1,0 +1,30 @@
+[package]
+name = "dirctl-cli"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "dirctl"
+path = "src/main.rs"
+
+[dependencies]
+# Core dependency (business logic)
+dirctl-core = { path = "../dirctl-core" }
+
+# Filesystem adapter
+dirctl-fs-local = { path = "../dirctl-fs-local" }
+
+# CLI framework
+clap.workspace = true
+
+# Logging/tracing
+tracing.workspace = true
+tracing-subscriber.workspace = true
+
+# Error handling
+thiserror.workspace = true
+
+# Async runtime
+tokio.workspace = true

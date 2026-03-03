@@ -1,0 +1,26 @@
+[package]
+name = "dirctl-fs-local"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+# Core dependency (implements ports defined in core)
+dirctl-core = { path = "../dirctl-core" }
+
+# Async runtime for filesystem operations
+tokio.workspace = true
+
+# Shared workspace dependencies
+thiserror.workspace = true
+serde.workspace = true
+uuid.workspace = true
+tracing.workspace = true
+
+# Filesystem utilities
+ignore.workspace = true
+walkdir.workspace = true
+
+[dev-dependencies]
+tempfile.workspace = true
