@@ -291,7 +291,28 @@ cargo run -p dirctl-cli -- --help
 
 ---
 
-#### 1.5 Define Core Error Types
+#### 1.5 Define Core Error Types ✅ COMPLETED
+
+**Status:** ✅ Completed 2026-03-07
+
+**What was done:**
+- Created dirctl-core/src/error.rs with comprehensive error types
+- Implemented all 13 error variants using thiserror
+- Added Result<T> type alias for ergonomic error handling
+- Included unit tests for error display and Result type
+- Updated dirctl-core/src/lib.rs to expose error module
+
+**Architecture Compliance:**
+- ✅ No unwrap() or expect() used
+- ✅ Uses thiserror for proper error handling
+- ✅ All errors have clear, descriptive messages
+- ✅ Result<T> type alias for consistent error handling
+
+**Validation:**
+```bash
+cargo test -p dirctl-core error
+# ✅ PASSED - 2 tests passed in 0.00s
+```
 
 **File:** `dirctl-core/src/error.rs`
 
@@ -2605,9 +2626,9 @@ enum Commands {
 
 ## Progress Tracking
 
-### Overall Progress: 4/85 tasks (4.7%)
+### Overall Progress: 5/85 tasks (5.9%)
 
-- [ ] Phase 1: Foundation (4/8 tasks) ✅ Tasks 1.1, 1.2, 1.3, 1.4 completed
+- [ ] Phase 1: Foundation (5/8 tasks) ✅ Tasks 1.1, 1.2, 1.3, 1.4, 1.5 completed
 - [ ] Phase 2: Domain Layer (0/10 tasks)
 - [ ] Phase 3: Configuration (0/9 tasks)
 - [ ] Phase 4: Scanner (0/10 tasks)
@@ -2625,10 +2646,11 @@ enum Commands {
 2. ✅ **Phase 1, Task 1.2**: Create Core Crate Skeleton - COMPLETED
 3. ✅ **Phase 1, Task 1.3**: Create Filesystem Adapter Crate - COMPLETED
 4. ✅ **Phase 1, Task 1.4**: Create CLI Crate Skeleton - COMPLETED
-5. **Next**: Phase 1, Task 1.5: Define Core Error Types
-6. Mark tasks complete as you go
-7. Run validation after each phase
-8. Update progress tracking
+5. ✅ **Phase 1, Task 1.5**: Define Core Error Types - COMPLETED
+6. **Next**: Phase 1, Task 1.6: Setup Testing Infrastructure
+7. Mark tasks complete as you go
+8. Run validation after each phase
+9. Update progress tracking
 
 ---
 
